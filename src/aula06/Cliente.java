@@ -1,17 +1,38 @@
-package aula06;
+package aula6;
 
 public class Cliente {
     public String nome;
     public String cpf;
-    //public Float saldo;
+    public Float saldo;
 
-
-    public Cliente(String nome, String cpf){
-        this.nome = nome;
-        this.cpf = cpf;
-
-
-
+    public Cliente() {
     }
 
+    public Cliente(String nome) {
+        this.nome = nome;
+    }
+
+    public Cliente(String cpf, String nome) {
+        this.cpf = cpf;
+        this.nome = nome;
+    }
+
+    public Cliente(Float saldo) {
+        this.saldo = saldo;
+    }
+
+    public Cliente(String nome, String cpf, Float saldo) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.saldo = saldo;
+    }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", saldo=" + saldo +
+                '}';
+    }
 }
